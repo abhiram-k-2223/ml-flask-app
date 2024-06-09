@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.temperature.label }}
+        {{ form.temperature }}
+    </div>
+    <br>
+    <div>
+        {{ form.Luminosity.label }}
+        {{ form.Luminosity }}
+    </div>
+    <br>
+    <div>
+        {{ form.radius.label }}
+        {{ form.radius }}
+    </div>
+    <br>
+    <div>
+        {{ form.Absmag.label }}
+        {{ form.Absmag }}
+    </div>
+    <br>
+    <br>
+    <div>{{ form.submit() }}</div>
+    <br>
+    <br>
+    <div>
+        {{ output }}
+    </div>
+    <br>
+    <div>
+        <p>Redirect to Homepage? <a href="{{ url_for('home') }}">Home</a></p>
+    </div>
+</form>
+{% endblock content %}
